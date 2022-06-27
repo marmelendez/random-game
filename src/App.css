@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+/* --------------------------------- */
+/* ---------- Cats images ---------- */
+/* --------------------------------- */
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cat-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* ------------------------------- */
+/* ---------- Container ---------- */
+/* ------------------------------- */
+.main {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main > * {
+  margin: 3rem;
+}
+
+/* ---------------------------------------- */
+/* ---------- Question Container ---------- */
+/* ---------------------------------------- */
+.question-container {
+  min-height: 40vh;
+  width: 40%;
+  padding: 3rem;
+  margin: auto;
+  font-size: 1.2rem;
+  font-family: 'Comfortaa', cursive;
+  background-color: #EDF2EF;
+  color: #212738;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-title {
+  color: #F97068;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.next-question-btn {
+  background-color: #D1D646;
+  color: #212738;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  border: none;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+}
+
+.next-question-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+}
+
+@media (max-width: 767px) {
+  .App-logo {
+    height: 35vmin;
+  }
+
+  .question-container {
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 0;
+  }  
+}

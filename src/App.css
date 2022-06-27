@@ -77,7 +77,7 @@
   border-radius: 3rem;
   border: none;
   font-family: 'Comfortaa', cursive;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .next-question-btn:hover {
@@ -96,4 +96,8 @@
     margin: 0;
     padding: 1.5rem 0;
   }  
+
+  .question-container p {
+    padding: 0 1rem;
+  }
 }

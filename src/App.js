@@ -12,7 +12,7 @@ function App() {
       
       <div className='question-container'>
         <p>Do you love working from home or would you rather be in the office? Is there a balance of both that you like best? </p>
-        <button className='next-question-btn'>Siguiente pregunta :)</button>
+        <button className='next-question-btn'>Next question :D</button>
       </div>
     </div>
   );

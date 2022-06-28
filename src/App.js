@@ -1,8 +1,43 @@
 import cat1 from './img/cat1.png';
 import cat2 from './img/cat2.png';
+import questions from './db/questions.json';
 import './App.css';
+import React, { useState, useEffect } from "react";
 
 function App() {
+
+  const [allQuestions, setAllQuestions] = useState(null);
+  const [question, setQuestion] = useState('');
+  const [cont, setCont] = useState(0);
+  const [id, setID] = useState(0);
+
+ 
+  function getQuestion() {  
+    if (cont < allQuestions.length) {
+      var index = Math.floor(Math.random() * allQuestions.length);
+      while (allQuestions[index].read) {
+        index = Math.floor(Math.random() * allQuestions.length);
+      }
+      allQuestions[index].read = true;
+      setQuestion(allQuestions[index].question); 
+      setID(index);  
+      setCont(cont + 1);
+    } else {
+        setQuestion("No more questions :c")
+    }
+  }  
+
+  useEffect(() => {
+    const data = Object.values(questions);
+    setAllQuestions(data);
+    
+    const index = Math.floor(Math.random() * data.length);
+    setQuestion(data[index].question);  
+    setID(index);
+
+  }, [setAllQuestions, setQuestion])
+
+
   return (
     <div className="main">
       <div className='cat-header'>
@@ -11,8 +46,9 @@ function App() {
       </div>
       
       <div className='question-container'>
-        <p>Do you love working from home or would you rather be in the office? Is there a balance of both that you like best? </p>
-        <button className='next-question-btn'>Next question :D</button>
+        <h1>{id}</h1>
+        <p>{question}</p>
+        <button className='next-question-btn' onClick={getQuestion}>Next question :D</button>
       </div>
     </div>
   );

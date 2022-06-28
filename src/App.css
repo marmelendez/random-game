@@ -64,6 +64,10 @@
   justify-content: space-between;
 }
 
+.question-container h1 {
+  color: #57C4E5;
+}
+
 .question-title {
   color: #F97068;
   font-size: 2rem;
